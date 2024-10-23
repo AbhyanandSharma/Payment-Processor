@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 const paymentProcessor = {
   validateCard: async (cardDetails) => {
     try {
-      const response = await fetch('http://localhost:3000/api/cards/validate', {
+      const response = await fetch('https://banking-apis-3.onrender.com/api/cards/validate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const paymentProcessor = {
 
   updateBankAccount: async (transactionDetails) => {
     try {
-      const response = await fetch('http://localhost:3000/api/cards/updateAccount', {
+      const response = await fetch('https://banking-apis-3.onrender.com/api/cards/updateAccount', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
