@@ -15,7 +15,9 @@ const { sequelize } = config;
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin : '*',
+}));
 
 // API Routes
 app.use('/api/payment', paymentRoutes);  // Payment processing endpoints
